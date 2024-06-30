@@ -12,5 +12,6 @@
    pkgs.spotify
    pkgs.blueman
    pkgs.fastfetch
+   pkgs.gnome.nautilus
   ];
 }
