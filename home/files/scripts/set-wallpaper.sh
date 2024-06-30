@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sh ~/.config/scripts/start-swww-daemon.sh
+swww-daemon &
 swww img ~/Pictures/wallpaper/wallpaper.jpg
