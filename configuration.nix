@@ -118,11 +118,6 @@ in
     NIXOS_OZONE_WL = "0";
   };
 
-  hardware = {
-    opengl.enable = true;
-    nvidia.modesetting.enable = false;
-  };
-
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # List packages installed in system profile. To search, run:

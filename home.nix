@@ -52,6 +52,7 @@ in
    pkgs.mission-center
    pkgs.spotify
    pkgs.blueman
+   pkgs.fastfetch
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -110,6 +111,12 @@ in
     theme.name = "adw-gtk3";
     cursorTheme.name = "Bibata-Modern-Ice";
     iconTheme.name = "GruvboxPlus";
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
   };
 
   qt = {
