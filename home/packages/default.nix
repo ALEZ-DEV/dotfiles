@@ -4,7 +4,6 @@
   home.packages = [
    pkgs.mpv
    pkgs.floorp
-   pkgs.wofi
    pkgs.qbittorrent
    pkgs.goofcord
    pkgs.localsend

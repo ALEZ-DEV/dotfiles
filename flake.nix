@@ -38,6 +38,7 @@
             ./home/packages/default.nix
             ./home/packages/dev/default.nix
             ./home/packages/desktop/default.nix
+            ./home/files/default.nix
             ./home/files/nvim.nix
 
             #game related
