@@ -7,7 +7,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    sql-studio.url = "github:frectonz/sql-studio";
   };
 
   outputs = { nixpkgs, home-manager, ... }:
