@@ -79,15 +79,6 @@
     "video/png" = [ "mpv.desktop" ];
     "video/jpg" = [ "mpv.desktop" ];
     "video/*" = [ "mpv.desktop" ];
-    "inode/directory" = [ "files.desktop" ];
-  };
-
-  xdg.mime = {
-    addedAssociations = {
-      "inode/directory" = "org.gnome.Nautilus.desktop";
-    };
-    defaultApplications = {
-      "inode/directory" = "org.gnome.Nautilus.desktop";
-    };
+    "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
   };
 }
