@@ -52,7 +52,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     prime = {
       nvidiaBusId = "pci@0000:01:00.0";
-      amdBudId = "pci@0000:07:00.0";
+      amdgpuBusId = "pci@0000:07:00.0";
     };
   };
 }
