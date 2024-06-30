@@ -6,6 +6,5 @@
     pkgs.git
     pkgs.gcc
     pkgs.gitnuro
-    pkgs.sqlitestudio
   ];
 }
