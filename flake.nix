@@ -36,6 +36,7 @@
       modules = [
             ./home/default.nix
             ./home/packages/default.nix
+            ./home/packages/dev/default.nix
             ./home/files/nvim.nix
 
             #game related
