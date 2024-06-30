@@ -131,6 +131,7 @@ in
     yazi
     git
     waybar
+    lshw
     (catppuccin-sddm.override {
       flavor = "macchiato";
       font = "Noto Sans";

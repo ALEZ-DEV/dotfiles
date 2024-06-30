@@ -44,17 +44,15 @@
   services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
-
     modesetting.enable = true;
-
     powerManagement.enable = false;
-
     powerManagement.finegrained = false;
-
     open = false;
-
     nvidiaSettings = true;
-
     package = config.boot.kernelPackages.nvidiaPackages.stable;
+    prime = {
+      nvidiaBusId = "pci@0000:01:00.0";
+      amdBudId = "pci@0000:07:00.0";
+    };
   };
 }
