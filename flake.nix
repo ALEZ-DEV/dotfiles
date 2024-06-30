@@ -34,11 +34,12 @@
       inherit pkgs;
 
       modules = [
-            ./home.nix
-            ./nvim.nix
+            ./home/default.nix
+            ./home/packages/default.nix
+            ./home/files/nvim.nix
 
             #game related
-            ./aagl.nix
+            ./home/games/aagl.nix
         ];
       };
     };
