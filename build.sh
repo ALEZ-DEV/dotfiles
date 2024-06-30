@@ -10,3 +10,4 @@ if [ -z "$HOST" ]; then
 fi
 
 sudo HOST=$HOST nixos-rebuild switch --flake ~/dotfiles#$HOST --impure
+home-manager switch --flake ~/dotfiles#$USER --impure

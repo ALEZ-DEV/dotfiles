@@ -68,6 +68,7 @@ in
     #   org.gradle.daemon.idletimeout=3600000
     # '';
     ".config/alacritty/alacritty.toml".source = ./alacritty.toml;
+    ".config/hypr/hyprland.conf".source = ./hyprland.conf;
   };
 
   # Home Manager can also manage your environment variables through
