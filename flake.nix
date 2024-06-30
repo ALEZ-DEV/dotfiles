@@ -36,6 +36,9 @@
       modules = [
             ./home.nix
             ./nvim.nix
+
+            #game related
+            ./aagl.nix
         ];
       };
     };
