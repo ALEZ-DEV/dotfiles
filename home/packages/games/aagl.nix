@@ -6,5 +6,6 @@ in
 {
   home.packages = (lib.mkIf config.packages.dev.enable [
     aagl.wavey-launcher
+    aagl.honkers-railway-launcher
   ]);
 }
