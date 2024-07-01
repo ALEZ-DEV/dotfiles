@@ -6,6 +6,7 @@
     ./desktop.nix
     ./fonts.nix
     ./network.nix
+    ./options.nix
     ./packages.nix
     ./services.nix
     ./users.nix

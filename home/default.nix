@@ -1,15 +1,13 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
+  imports = mkMerge [
     ./packages/default.nix
-    ./packages/dev/default.nix
+    (mkIf (config.packages.dev.enable) { ./packages/dev/default.nix; })
     ./packages/desktop/default.nix
+    ./packages/games/aagl.nix 
     ./files/default.nix
     ./files/nvim.nix
-
-    #game related
-    ./games/aagl.nix 
   ];
 
 
