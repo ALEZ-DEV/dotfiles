@@ -1,6 +1,18 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./packages/default.nix
+    ./packages/dev/default.nix
+    ./packages/desktop/default.nix
+    ./files/default.nix
+    ./files/nvim.nix
+
+    #game related
+    ./games/aagl.nix 
+  ];
+
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "alez";

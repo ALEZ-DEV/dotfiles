@@ -31,18 +31,10 @@
     };
 
     homeConfigurations."alez" = home-manager.lib.homeManagerConfiguration {
-      inherit pkgs;
+        inherit pkgs;
 
-      modules = [
-            ./home/default.nix
-            ./home/packages/default.nix
-            ./home/packages/dev/default.nix
-            ./home/packages/desktop/default.nix
-            ./home/files/default.nix
-            ./home/files/nvim.nix
-
-            #game related
-            ./home/games/aagl.nix
+        modules = [
+          ./home/default.nix
         ];
       };
     };
