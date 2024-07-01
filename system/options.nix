@@ -1,7 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
-  options = {
+  options = with lib; {
     packages = {
       dev.enable = mkOption {
         type = types.bool;

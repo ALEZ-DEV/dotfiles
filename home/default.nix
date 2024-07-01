@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
-  imports = mkMerge [
+  imports = with lib; [
     ./packages/default.nix
-    (mkIf config.packages.dev.enable [ ./packages/dev/default.nix ])
+    (mkIf config.packages.dev.enable ./packages/dev/default.nix)
     ./packages/desktop/default.nix
     ./packages/games/aagl.nix 
     ./files/default.nix

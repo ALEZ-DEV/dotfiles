@@ -15,6 +15,7 @@
     pkgs = nixpkgs.legacyPackages.${system};
     hostName = builtins.getEnv "HOST";
     hardwarePath = ./hosts/${hostName}/hardware-configuration.nix;
+    configPath = ./hosts/${hostName}/config.nix;
   in {
     nixosConfigurations = {
       ${hostName} = nixpkgs.lib.nixosSystem {
@@ -22,6 +23,7 @@
         modules = [
           ./system/configuration.nix
           hardwarePath
+          configPath
         ];
       };
     };
@@ -31,6 +33,7 @@
 
         modules = [
           ./home/default.nix
+          configPath
         ];
       };
     };
