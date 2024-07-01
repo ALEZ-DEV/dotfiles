@@ -4,5 +4,6 @@
   home.packages = [
     pkgs.wofi
     pkgs.swww
+    pkgs.pavucontrol
   ];
 }

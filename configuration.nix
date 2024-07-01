@@ -130,7 +130,6 @@ in
     alacritty
     yazi
     git
-    waybar
     lshw
     (catppuccin-sddm.override {
       flavor = "macchiato";
