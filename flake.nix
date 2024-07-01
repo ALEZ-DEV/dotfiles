@@ -13,16 +13,10 @@
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
+    hostName = builtins.getEnv "HOST";
   in {
     nixosConfigurations = {
-      "laptop-lenovo-nixos" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./configuration.nix
-        ];
-      };
-
-      "omen-laptop" = nixpkgs.lib.nixosSystem {
+      ${hostName} = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
