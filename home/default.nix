@@ -3,11 +3,7 @@
 {
   imports = [
     ./packages/default.nix
-    ./packages/dev/default.nix
-    ./packages/desktop/default.nix
-    ./packages/games/aagl.nix 
     ./files/default.nix
-    ./files/nvim.nix
   ];
 
 

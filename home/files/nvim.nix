@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 let
   nvimRepo = "https://github.com/ALEZ-DEV/nvim";
@@ -6,19 +6,21 @@ let
   gitPath = "${pkgs.git}/bin/git";
 in
 {
-  home.packages = [ pkgs.git ];
+  home = lib.mkIf config.packages.dev.enable {
+    packages = [ pkgs.git ];
 
-  home.sessionPath = [ "${pkgs.git}/bin" ];
+    sessionPath = [ "${pkgs.git}/bin" ];
 
-  home.activation = {
-    run = ''
-      if [ ! -d "${nvimDir}" ]; then
-        ${gitPath} clone ${nvimRepo} ${nvimDir}
-      else
-        cd ${nvimDir} && ${gitPath} pull
-      fi
+    activation = {
+      run = ''
+        if [ ! -d "${nvimDir}" ]; then
+          ${gitPath} clone ${nvimRepo} ${nvimDir}
+        else
+          cd ${nvimDir} && ${gitPath} pull
+        fi
 
-      echo "Neovim configuration updated!"
-    '';
+        echo "Neovim configuration updated!"
+      '';
+    };
   };
 }
