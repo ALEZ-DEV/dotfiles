@@ -11,7 +11,7 @@
     nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
-  outputs = { nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, ... }@inputs:
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -20,6 +20,11 @@
     nixosConfigurations = {
       ${hostName} = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+
+        specialArgs = {
+          inherit inputs;
+        };
+
         modules = [
           ./system/configuration.nix
           ./hosts/${hostName}/hardware-configuration.nix
@@ -29,6 +34,10 @@
 
     homeConfigurations."alez" = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+
+        extraSpecialArgs = {
+          inherit inputs;
+        };
 
         modules = [
           ./home/default.nix

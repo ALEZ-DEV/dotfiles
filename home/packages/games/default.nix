@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 let
   nix-gaming = inputs.nix-gaming;
@@ -6,12 +6,12 @@ in
 {
   imports = [
     ./aagl.nix
-    nix-gaming.nixosModules.osu-lazer-bin
-    nix-gaming.nixosModules.northstar-proton
-    nix-gaming.viper
   ];
 
   home.packages = [
-    steam
+    pkgs.steam
+    #nix-gaming.nixosModules.osu-lazer-bin
+    #nix-gaming.nixosModules.northstar-proton
+    #nix-gaming.nixosModules.viper
   ];
 }
