@@ -4,16 +4,7 @@
 
 { config, pkgs, ... }:
 
-let
-  hostName = builtins.getEnv "HOST";
-  hardwareConfigPath = ./hosts/${hostName}/hardware-configuration.nix;
-in
 {
-  imports =
-    [
-      hardwareConfigPath
-    ];
-
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;

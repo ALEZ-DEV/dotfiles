@@ -14,12 +14,14 @@
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
     hostName = builtins.getEnv "HOST";
+    hardwarePath = ./hosts/${hostName}/hardware-configuration.nix;
   in {
     nixosConfigurations = {
       ${hostName} = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix
+          ./system/configuration.nix
+          hardwarePath
         ];
       };
     };
@@ -32,6 +34,4 @@
         ];
       };
     };
-
-
 }
