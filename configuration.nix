@@ -136,7 +136,7 @@ in
       flavor = "macchiato";
       font = "Noto Sans";
       fontSize = "9";
-      #background = "some path";
+      background = "/home/alez/Pictures/wallpaper/wallpaper.jpg";
       loginBackground = true;
     })
   ];
