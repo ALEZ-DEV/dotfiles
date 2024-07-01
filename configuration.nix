@@ -137,7 +137,7 @@ in
       font = "Noto Sans";
       fontSize = "9";
       background = "/home/alez/Pictures/wallpaper/wallpaper.jpg";
-      loginBackground = true;
+      #loginBackground = true;
     })
   ];
 
