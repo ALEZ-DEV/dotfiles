@@ -4,7 +4,7 @@
   imports = [
     ./dev/default.nix
     ./desktop/default.nix
-    ./games/aagl.nix 
+    ./games/default.nix
   ];
 
   home.packages = [
