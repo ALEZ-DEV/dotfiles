@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./dev/default.nix
+    ./desktop/default.nix
+    ./games/aagl.nix 
+  ];
+
   home.packages = [
    pkgs.mpv
    pkgs.floorp

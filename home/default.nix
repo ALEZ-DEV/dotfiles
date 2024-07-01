@@ -1,9 +1,9 @@
 { config, pkgs, lib, ... }:
 
 {
-  imports = with lib; [
+  imports = [
     ./packages/default.nix
-    (mkIf config.packages.dev.enable ./packages/dev/default.nix)
+    ./packages/dev/default.nix
     ./packages/desktop/default.nix
     ./packages/games/aagl.nix 
     ./files/default.nix
