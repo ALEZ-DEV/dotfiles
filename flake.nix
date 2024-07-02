@@ -7,8 +7,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     nix-gaming.url = "github:fufexan/nix-gaming";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
@@ -26,7 +26,10 @@
         };
 
         modules = [
+          inputs.nix-flatpak.nixosModules.nix-flatpak
+
           ./system/configuration.nix
+          ./hosts/default.nix
           ./hosts/${hostName}/hardware-configuration.nix
         ];
       };
@@ -42,6 +45,7 @@
         modules = [
           ./home/default.nix
           ./system/options.nix
+          ./hosts/default.nix
           ./hosts/${hostName}/config.nix
         ];
       };
