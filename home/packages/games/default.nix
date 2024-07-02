@@ -8,8 +8,8 @@ in
     ./aagl.nix
   ];
 
-  home.packages = (lib.mkIf config.packages.games.enable [
-    pkgs.steam
+  home.packages = (lib.mkIf config.packages.games.enable with pkgs; [
+    steam
     #nix-gaming.nixosModules.osu-lazer-bin
     #nix-gaming.nixosModules.northstar-proton
     #nix-gaming.nixosModules.viper

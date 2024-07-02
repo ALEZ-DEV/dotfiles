@@ -13,6 +13,11 @@
         default = false;
         description = "Install game related packages";
       };
+      office.enable = mkOption {
+        type = types.bool;
+        default = false;
+        description = "Install office related packages";
+      };
     };
   };
 }
