@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./direnv.nix
     ./packages/default.nix
     ./files/default.nix
   ];
