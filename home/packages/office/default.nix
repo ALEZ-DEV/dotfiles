@@ -1,10 +1,6 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
-  imports = [
-    inputs.nix-flatpak.nixosmodules.nix-flatpak
-  ];
-
   home.packages = lib.mkIf config.packages.office.enable (with pkgs; [
     goofcord
     spotify
