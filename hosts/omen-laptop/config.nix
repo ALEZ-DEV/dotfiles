@@ -4,6 +4,6 @@
   config.packages = {
     dev.enable = true;
     games.enable = true;
-    office.enavle = true;
+    office.enable = true;
   };
 }
