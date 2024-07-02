@@ -29,7 +29,6 @@
           inputs.nix-flatpak.nixosModules.nix-flatpak
 
           ./system/configuration.nix
-          ./hosts/default.nix
           ./hosts/${hostName}/hardware-configuration.nix
         ];
       };
@@ -43,9 +42,10 @@
         };
 
         modules = [
+          inputs.nix-flatpak.nixosModules.nix-flatpak
+
           ./home/default.nix
           ./system/options.nix
-          ./hosts/default.nix
           ./hosts/${hostName}/config.nix
         ];
       };
