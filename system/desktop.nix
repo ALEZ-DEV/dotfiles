@@ -21,6 +21,6 @@
     # if your cursor become invisible / enable putting "1"
     WLR_NO_HARDWARE_CURSORS = "0";
     # Hint eletron apps to use wayland / enable putting "1"
-    NIXOS_OZONE_WL = "0";
+    NIXOS_OZONE_WL = "1";
   };
 }
