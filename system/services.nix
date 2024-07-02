@@ -4,8 +4,10 @@
   services = {
     xserver = {
       enable = true;
-      layout = "ch";
-      xkbVariant = "fr";
+      xkb = {
+        layout = "ch";
+        variant = "fr";
+      };
     };
 
     displayManager.sddm = {
