@@ -19,5 +19,12 @@
         description = "Install office related packages";
       };
     };
+    drivers = {
+      tablet.enable = mkOption {
+        type = types.bool;
+        default = false;
+        description = "Enable graphics tablet drivers";
+      };
+    };
   };
 }
