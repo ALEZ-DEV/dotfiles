@@ -7,7 +7,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nix-gaming.url = "github:fufexan/nix-gaming";
+    nix-gaming.url = "github:fufexan/nix-gaming?rev=6ca46afc73dcca4bfef3e6d18c7f1ac8aae99bd9"; # added specific commit because osu devs don't know how to make a release
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:

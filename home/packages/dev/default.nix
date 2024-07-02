@@ -10,5 +10,6 @@
     neovim
     gcc
     fzf
+    ripgrep
   ]);
 }

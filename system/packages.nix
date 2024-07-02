@@ -1,9 +1,15 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
 
   services.flatpak.enable = true;
+
+  #nix-gaming caching 
+  nix.settings = lib.mkIf config.packages.games.enable { 
+    substituters = ["https://nix-gaming.cachix.org"];
+    trusted-public-keys = ["nix-gaming.cachix.org-1:nbjlureqMbRAxR1gJ/f3hxemL9svXaZF/Ees8vCUUs4="];
+  };
 
   environment.systemPackages = with pkgs; [
     vim
