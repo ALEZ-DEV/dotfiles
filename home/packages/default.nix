@@ -5,6 +5,7 @@
     ./dev/default.nix
     ./desktop/default.nix
     ./games/default.nix
+    ./lib/default.nix
     ./office/default.nix
   ];
 

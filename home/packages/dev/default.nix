@@ -11,5 +11,10 @@
     gcc
     fzf
     ripgrep
+
+    # language
+    # Rust
+    rustc
+    cargo
   ]);
 }
