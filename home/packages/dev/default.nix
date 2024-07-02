@@ -2,10 +2,13 @@
 
 {
   home.packages = lib.mkIf config.packages.dev.enable (with pkgs; [
-    neovim
     git
-    gcc
     gitnuro
     lazygit
+
+    # neovim dependecies
+    neovim
+    gcc
+    fzf
   ]);
 }
