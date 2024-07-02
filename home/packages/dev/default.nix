@@ -6,6 +6,7 @@
     gitnuro
     lazygit
     podman
+    distrobox
 
     # neovim dependecies
     neovim
