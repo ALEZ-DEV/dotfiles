@@ -18,5 +18,6 @@
     blueman
     fastfetch
     gnome.nautilus
+    obs-studio
   ];
 }

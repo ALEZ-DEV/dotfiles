@@ -15,9 +15,6 @@
     ./virtualisation.nix
   ];
 
-  
-  
-
   boot = {
     plymouth = {
       enable = true;
