@@ -26,5 +26,12 @@
         description = "Enable graphics tablet drivers";
       };
     };
+    user = {
+      home = mkOption {
+        type = types.path;
+        default = builtins.getEnv "HOME";
+        description = "Default home folder of the current user";
+      };
+    };
   };
 }
