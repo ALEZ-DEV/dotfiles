@@ -1,7 +1,12 @@
 { config, pkgs, ... }:
 
+let
+  chromeDir = "${config.xdg.configHome}/browser/style/userChrome.css";
+in
 {
-  programs.floorp = {
-    enable = true;
-  };
+  home.packages = with pkgs; [
+    (floorp.override {
+      userChrome = chromeDir;
+    })
+  ];
 }

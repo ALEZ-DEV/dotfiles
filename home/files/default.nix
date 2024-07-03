@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./browser/default.nix
     ./nvim/default.nix
   ];
 
