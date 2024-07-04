@@ -11,6 +11,8 @@ in
   home.packages = lib.mkIf config.packages.games.enable (with pkgs; [
     steam
     waydroid
+    bottles
+    lutris
     nix-gaming.osu-lazer-bin
     nix-gaming.northstar-proton
   ]);

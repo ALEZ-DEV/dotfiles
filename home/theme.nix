@@ -1,6 +1,10 @@
 { config, pkgs, ... }: 
 
 {
+  home.packages = with pkgs; [
+    gnome3.adwaita-icon-theme
+  ];
+
   gtk = {
     enable = true;
     theme.name = "adw-gtk3";
@@ -22,4 +26,5 @@
       package = pkgs.adwaita-qt;
     };
   };
+
 }
