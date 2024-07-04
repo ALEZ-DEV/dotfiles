@@ -7,7 +7,7 @@
 
   gtk = {
     enable = true;
-    theme.name = "adw-gtk3";
+    theme.name = "adw-gtk3-dark";
     cursorTheme.name = "Bibata-Modern-Ice";
     iconTheme.name = "GruvboxPlus";
   };
