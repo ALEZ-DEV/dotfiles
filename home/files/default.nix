@@ -18,6 +18,6 @@
 
   home.sessionVariables = {
     XDG_CURRENT_DESKTOP = "Hyprland";
-    HYPRSHOT_DIR = "~/Pictures/Screenshots"
+    HYPRSHOT_DIR = "~/Pictures/Screenshots";
   };
 }
