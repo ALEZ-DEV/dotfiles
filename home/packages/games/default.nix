@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, ... }:
+{ config, pkgs, lib, inputs, programs, ... }:
 
 let
   nix-gaming = inputs.nix-gaming.packages.${pkgs.system};
@@ -8,8 +8,9 @@ in
     ./aagl.nix
   ];
 
+  #programs.steam.enable = true; # Idk why it do not want to work
+
   home.packages = lib.mkIf config.packages.games.enable (with pkgs; [
-    steam
     waydroid
     bottles
     lutris
