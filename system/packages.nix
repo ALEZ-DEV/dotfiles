@@ -17,6 +17,8 @@
     ];
   };
 
+  programs.steam.enable = config.packages.games.enable;
+
   environment.systemPackages = with pkgs; [
     vim
     networkmanager
