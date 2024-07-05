@@ -13,6 +13,7 @@ in
     waydroid
     bottles
     lutris
+    winetricks
     wineWowPackages.staging
     nix-gaming.osu-lazer-bin
     nix-gaming.northstar-proton
