@@ -17,7 +17,7 @@
     ];
   };
 
-  programs.steam.enable = config.packages.games.enable;
+  programs.steam.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim
