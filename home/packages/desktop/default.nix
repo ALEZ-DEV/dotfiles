@@ -6,7 +6,8 @@
     swww
     pavucontrol
     waybar
-    flameshot
     wl-clipboard
+    grim
+    slurp
   ];
 }

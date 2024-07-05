@@ -7,6 +7,7 @@
     lazygit
     podman
     distrobox
+    jq
 
     # neovim dependecies
     neovim
