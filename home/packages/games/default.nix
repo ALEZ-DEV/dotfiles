@@ -2,6 +2,7 @@
 
 let
   nix-gaming = inputs.nix-gaming.packages.${pkgs.system};
+  isEnable = config.packages.games.enable;
 in 
 {
   imports = [
@@ -10,7 +11,7 @@ in
 
   #programs.steam.enable = true; # Idk why it do not want to work
 
-  home.packages = lib.mkIf config.packages.games.enable (with pkgs; [
+  home.packages = lib.mkIf isEnable (with pkgs; [
     waydroid
     bottles
     mangohud
@@ -20,4 +21,15 @@ in
     nix-gaming.osu-lazer-bin
     nix-gaming.northstar-proton
   ]);
+
+  # some desktop entries
+  xdg.desktopEntries = lib.mkIf isEnable {
+    "nikke" = {
+      name = "Nikke: Goddess of Victory";
+      genericName = "nikke";
+      exec = "sh ${config.user.home}/Games/Nikke/start.sh";
+      terminal = false;
+      categories = [ "Application" ];
+    };
+  };
 }
