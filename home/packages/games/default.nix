@@ -13,6 +13,7 @@ in
   home.packages = lib.mkIf config.packages.games.enable (with pkgs; [
     waydroid
     bottles
+    mangohud
     lutris
     winetricks
     wineWowPackages.staging
