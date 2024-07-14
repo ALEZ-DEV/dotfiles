@@ -12,11 +12,11 @@ in
     sessionPath = [ "${pkgs.git}/bin" ];
 
     activation = {
-      run = ''
+      configureNeovim = ''
         if [ ! -d "${nvimDir}" ]; then
           ${gitPath} clone ${nvimRepo} ${nvimDir}
         else
-          cd ${nvimDir} && ${gitPath} pull
+          cd ${nvimDir} && ${gitPath} pull || echo "Failed to pull Neovim configuration"
         fi
 
         echo "Neovim configuration updated!"

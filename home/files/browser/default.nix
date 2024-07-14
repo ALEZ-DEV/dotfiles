@@ -17,7 +17,7 @@ in
     sessionPath = [ "${pkgs.git}/bin" ];
 
     activation = {
-      run = lib.mkForce ''
+      configureBrowser = ''
         cd ${chromeDir}
         if $(${gitPath} rev-parse --is-inside-work-tree); then
           ${gitPath} pull

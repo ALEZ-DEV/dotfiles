@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 let
   mpvRepo = "https://github.com/ALEZ-DEV/mpv";
@@ -12,7 +12,7 @@ in
     sessionPath = [ "${pkgs.git}/bin" ];
 
     activation = {
-      run = ''
+      configureMPV = ''
         if [ ! -d "${mpvDir}" ]; then
           ${gitPath} clone ${mpvRepo} ${mpvDir}
         else

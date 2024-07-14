@@ -3,6 +3,7 @@
 {
   imports = [
     ./browser/default.nix
+    ./mpv/default.nix
     ./nvim/default.nix
   ];
 
