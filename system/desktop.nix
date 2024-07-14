@@ -6,6 +6,8 @@
     xwayland.enable = true;
   };
 
+  programs.light.enable = true;
+
   xdg = {
     portal = {
       enable = true;
@@ -22,5 +24,10 @@
     WLR_NO_HARDWARE_CURSORS = "0";
     # Hint eletron apps to use wayland / enable putting "1"
     NIXOS_OZONE_WL = "1";
+  };
+
+  sound.mediaKeys = {
+    enable = true;
+    volumeStep = "2%";
   };
 }

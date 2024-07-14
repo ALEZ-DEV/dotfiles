@@ -6,7 +6,6 @@
     ./desktop.nix
     ./fonts.nix
     ./hardware.nix
-    ./libraries.nix
     ./network.nix
     ./options.nix
     ./packages.nix

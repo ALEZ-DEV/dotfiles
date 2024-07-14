@@ -18,6 +18,10 @@
   };
 
   programs.steam.enable = true;
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    wineWowPackages.stagingFull
+  ];
 
   environment.systemPackages = with pkgs; [
     vim

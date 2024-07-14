@@ -5,13 +5,13 @@
     xserver = {
       enable = true;
       xkb = {
-        layout = "ch";
-        variant = "fr";
+        layout = "us";
       };
     };
 
     displayManager.sddm = {
       enable = true;
+      wayland.enable = true;
       theme = "catppuccin-macchiato";
       package = pkgs.kdePackages.sddm;
     };
@@ -24,6 +24,10 @@
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
+    };
+
+    actkbd = {
+      enable = true;
     };
   };
 }
