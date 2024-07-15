@@ -23,5 +23,6 @@
     obs-studio
 
     python3
+    ffmpeg-full
   ];
 }
