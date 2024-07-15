@@ -18,6 +18,11 @@
         default = false;
         description = "Install office related packages";
       };
+      video-editor.enable = mkOption {
+        type = types.bool;
+        default = false;
+        description = "Install Davinci-resolve and other utility";
+      };
     };
     drivers = {
       tablet.enable = mkOption {

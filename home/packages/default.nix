@@ -6,7 +6,9 @@
     ./dev/default.nix
     ./desktop/default.nix
     ./games/default.nix
+    ./libraries/default.nix
     ./office/default.nix
+    ./video-editor/default.nix
   ];
 
   # basic needs
@@ -19,5 +21,7 @@
     fastfetch
     gnome.nautilus
     obs-studio
+
+    python3
   ];
 }
