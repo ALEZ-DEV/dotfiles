@@ -52,8 +52,12 @@
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
     prime = {
-      nvidiaBusId = "pci@0000:01:00.0";
-      amdgpuBusId = "pci@0000:07:00.0";
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+      nvidiaBusId = "PCI:1:0:0";
+      amdgpuBusId = "PCI:7:0:0";
     };
   };
 }
