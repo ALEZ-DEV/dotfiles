@@ -9,5 +9,6 @@
     wl-clipboard
     grim
     slurp
+    mako
   ];
 }
