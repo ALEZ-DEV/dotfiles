@@ -14,7 +14,9 @@
     ".config/alacritty/alacritty.toml".source = ./terminal/alacritty.toml;
 
     ".config/hypr/hyprland.conf".source = ./wm/hyprland.conf;
-    "Pictures/wallpaper/wallpaper.jpg".source = ./wm/wallpaper.jpg;
+    ".config/wallpaper/wallpaper.mp4".source = ./wm/wallpaper.mp4;
+    ".config/wallpaper/wallpaper-littlescreen.mp4".source = ./wm/wallpaper-littlescreen.mp4;
+    ".config/wallpaper/wallpaper-widescreen.mp4".source = ./wm/wallpaper-widescreen.mp4;
   };
 
   home.sessionVariables = {
