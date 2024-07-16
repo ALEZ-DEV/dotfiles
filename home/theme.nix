@@ -2,7 +2,9 @@
 
 {
   home.packages = with pkgs; [
-    pkgs.adwaita-icon-theme
+    adwaita-icon-theme
+    adw-gtk3
+    adwaita-qt
   ];
 
   gtk = {
