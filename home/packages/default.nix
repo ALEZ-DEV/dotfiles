@@ -24,5 +24,6 @@
 
     python3
     ffmpeg-full
+    yt-dlp
   ];
 }
