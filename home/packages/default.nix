@@ -19,7 +19,7 @@
     mission-center
     blueman
     fastfetch
-    gnome.nautilus
+    nautilus
     obs-studio
 
     python3

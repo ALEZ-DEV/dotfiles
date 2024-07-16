@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    gnome3.adwaita-icon-theme
+    pkgs.adwaita-icon-theme
   ];
 
   gtk = {
