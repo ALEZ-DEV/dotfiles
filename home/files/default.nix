@@ -8,7 +8,6 @@
   ];
 
   home.file = {
-    ".config/scripts/set-wallpaper.sh".source = ./scripts/set-wallpaper.sh;
     ".config/scripts/hyprshot.sh".source = ./scripts/hyprshot.sh;
 
     ".config/alacritty/alacritty.toml".source = ./terminal/alacritty.toml;
