@@ -9,8 +9,6 @@ in
     ./aagl.nix
   ];
 
-  #programs.steam.enable = true; # Idk why it do not want to work
-
   home.packages = lib.mkIf isEnable (with pkgs; [
     waydroid
     bottles

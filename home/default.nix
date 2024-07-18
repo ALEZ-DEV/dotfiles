@@ -16,7 +16,4 @@
   nixpkgs.config.allowUnfree = true;
 
   programs.home-manager.enable = true; 
-
-  # don't work too ???!
-  #programs.steam.enable = lib.mkIf config.packages.games.enable true;
 }
