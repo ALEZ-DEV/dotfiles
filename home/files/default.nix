@@ -9,6 +9,8 @@
 
   home.file = {
     ".config/scripts/hyprshot.sh".source = ./scripts/hyprshot.sh;
+    ".config/scripts/playerctl-status.sh".source = ./scripts/playerctl-status.sh;
+    ".config/scripts/playerctl-status-new.sh".source = ./scripts/playerctl-status-new.sh;
 
     ".config/alacritty/alacritty.toml".source = ./terminal/alacritty.toml;
 
@@ -21,6 +23,8 @@
     ".config/waybar/style-bottom.css".source = ./waybar/style-bottom.css;
     ".config/waybar/style-hyprland.css".source = ./waybar/style-hyprland.css;
     ".config/waybar/style-options.css".source = ./waybar/style-options.css;
+    ".config/waybar/style-app.css".source = ./waybar/style-app.css;
+    ".config/waybar/style-scheme.css".source = ./waybar/style-scheme.css;
   };
 
   home.sessionVariables = {
