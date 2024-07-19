@@ -13,6 +13,8 @@ in
     waydroid
     bottles
     mangohud
+    gamemode
+    protonup-qt
     lutris
     winetricks
     wineWowPackages.staging
