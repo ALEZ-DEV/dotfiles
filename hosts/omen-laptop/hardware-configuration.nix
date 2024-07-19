@@ -11,6 +11,7 @@
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "usbhid" "usb_storage" "sd_mod" "sdhci_pci" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
+  boot.blacklistedKernelModules = [ "nouveau" ];
   boot.extraModulePackages = [ ];
   boot.kernelParams = [ "nvidia-drm.fbdev=1" ];
 
@@ -38,15 +39,25 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
   hardware = {
-    graphics.enable = true;
     cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+      extraPackages = with pkgs; [ 
+        vaapiVdpau 
+        libvdpau-va-gl
+        nvidia-vaapi-driver 
+      ];
+    };
   };
 
   services.xserver.videoDrivers = ["nvidia"];
 
+  environment.systemPackages = [ pkgs.nv-codec-headers-12 ];
+
   hardware.nvidia = {
     modesetting.enable = true;
-    powerManagement.enable = false;
+    powerManagement.enable = true;
     powerManagement.finegrained = false;
     open = false;
     nvidiaSettings = true;
