@@ -3,6 +3,7 @@
 {
   home.packages = with pkgs; [
     wofi
+    onagre
     pavucontrol
     playerctl
     wl-clipboard
