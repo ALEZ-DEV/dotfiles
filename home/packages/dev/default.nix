@@ -19,5 +19,7 @@
     # Rust
     rustc
     cargo
+    just
+    rust-analyzer
   ]);
 }
