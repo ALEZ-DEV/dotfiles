@@ -5,6 +5,7 @@
     adwaita-icon-theme
     adw-gtk3
     adwaita-qt
+    bibata-cursors
   ];
 
   gtk = {
@@ -29,4 +30,8 @@
     };
   };
 
+  home.pointerCursor = {
+    name = "Bibata-Modern-Ice";
+    package = pkgs.bibata-cursors;
+  };
 }
