@@ -17,6 +17,7 @@ in
     protonup-qt
     lutris
     winetricks
+    protontricks
     wineWowPackages.staging
     nix-gaming.osu-lazer-bin
     nix-gaming.northstar-proton
