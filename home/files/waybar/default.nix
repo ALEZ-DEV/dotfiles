@@ -237,7 +237,7 @@
 
       "custom/cc" = {
         format = " 󰍜";
-        on-click = "";
+        on-click = "swaync-client -op";
         tooltip = false;
       };
 
