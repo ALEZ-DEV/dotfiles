@@ -5,6 +5,7 @@
     ./browser/default.nix
     ./mpv/default.nix
     ./nvim/default.nix
+    ./waybar/default.nix
   ];
 
   home.file = {
