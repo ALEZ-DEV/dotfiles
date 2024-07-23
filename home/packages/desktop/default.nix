@@ -9,8 +9,13 @@
     wl-clipboard
     grim
     slurp
-    mako
+    swaynotificationcenter
     mpvpaper
     swww
   ];
+
+  services.swaync = {
+    enable = true;
+    package = pkgs.swaynotificationcenter;
+  };
 }
