@@ -19,8 +19,13 @@
     };
   };
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
+  home = {
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
+    sessionPath = [
+      "${config.user.home}/.cargo/bin"
+    ];
   };
 
   xdg.mimeApps.defaultApplications = {
