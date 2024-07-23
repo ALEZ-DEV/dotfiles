@@ -30,7 +30,6 @@
       "group/rightside" = {
         orientation = "horizontal";
         modules = [
-          "network#statusprefix"
           "group/network"
           "custom/cpuprefix"
           "cpu"
@@ -119,8 +118,8 @@
         modules = [
           "network#statusprefix"
           "network#status"
-          "network#uploadprefix"
-          "network#dnlprefix"
+          #"network#uploadprefix"
+          #"network#dnlprefix"
         ];
       };
 
@@ -199,6 +198,11 @@
 
       "custom/timeprefix" = {
         format = " ";
+        tooltip = false;
+      };
+
+      "custom/memoryprefix" = {
+        format = " ";
         tooltip = false;
       };
 
