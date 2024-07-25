@@ -1,4 +1,4 @@
-{ config, nixpkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.wofi = {
@@ -23,7 +23,7 @@
       image_size = 20;
       display_generic = false;
       location = "center";
-      key_expand = "Tab"
+      key_expand = "Tab";
       insensitive = false;
     };
     style = ''
@@ -34,11 +34,11 @@
       }
 
       #window {
-        background: rgba(41, 46, 66, 0.5);
+        background: rgba(46, 46, 46, 0.85);
         margin: auto;
         padding: 10px;
         border-radius: 20px;
-        border: 5px solid #b072d1;
+        border: 4px solid #ea9a97;
       }
 
       #input {
