@@ -7,6 +7,7 @@
     ./nvim/default.nix
     ./swaync/default.nix
     ./waybar/default.nix
+    ./wofi/default.nix
   ];
 
   home.file = {
