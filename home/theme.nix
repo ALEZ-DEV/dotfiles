@@ -11,7 +11,7 @@
   gtk = {
     enable = true;
     theme.name = "adw-gtk3-dark";
-    cursorTheme.name = "Bibata-Modern-Ice";
+    cursorTheme.name = "Bibata-Modern-Classic";
     iconTheme.name = "GruvboxPlus";
   };
 
@@ -31,7 +31,7 @@
   };
 
   home.pointerCursor = {
-    name = "Bibata-Modern-Ice";
+    name = "Bibata-Modern-Classic";
     package = pkgs.bibata-cursors;
   };
 }
