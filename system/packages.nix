@@ -32,11 +32,12 @@
     yazi
     git
     lshw
+    polkit_gnome
     (catppuccin-sddm.override {
       flavor = "macchiato";
       font = "Noto Sans";
       fontSize = "9";
-      background = "/home/alez/Pictures/wallpaper/wallpaper.jpg";
+      background = "${./sddm_wallpaper.jpg}";
     })
   ];
 }
