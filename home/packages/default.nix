@@ -21,6 +21,7 @@
     fastfetch
     nautilus
     obs-studio
+    eog
 
     python3
     ffmpeg-full

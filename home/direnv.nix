@@ -35,5 +35,17 @@
     "video/jpg" = [ "mpv.desktop" ];
     "video/*" = [ "mpv.desktop" ];
     "inode/directory" = [ "org.gnome.Nautilus.desktop" ];
+    "image/png" = [ "org.gnome.eog.desktop" ];
+    "image/jpeg" = [ "org.gnome.eog.desktop" ];
+    "image/gif" = [ "org.gnome.eog.desktop" ];
+    "image/bmp" = [ "org.gnome.eog.desktop" ];
+    "image/tiff" = [ "org.gnome.eog.desktop" ];
+    "image/webp" = [ "org.gnome.eog.desktop" ];
+    "image/svg+xml" = [ "org.gnome.eog.desktop" ];
+    "image/avif" = [ "org.gnome.eog.desktop" ];
+    "image/x-raw" = [ "org.gnome.eog.desktop" ];
+    "image/x-tga" = [ "org.gnome.eog.desktop" ];
+    "image/x-exr" = [ "org.gnome.eog.desktop" ];
+    "image/vnd.radiance" = [ "org.gnome.eog.desktop" ];
   };
 }
