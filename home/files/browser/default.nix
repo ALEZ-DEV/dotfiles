@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 let
-  arcWTFRepo = "https://github.com/KiKaraage/ArcWTF";
+  arcWTFRepo = "https://github.com/Yukei2K/floorp-gnome-theme";
   gitPath = "${pkgs.git}/bin/git";
 
   floorpDir = "${config.user.home}/.floorp";
@@ -27,7 +27,7 @@ in
           ${gitPath} clone ${arcWTFRepo} ${chromeDir}
         fi
 
-        echo "ArcWTF configuration updated!"
+        echo "Floorp configuration updated!"
       '';
     };
   };
