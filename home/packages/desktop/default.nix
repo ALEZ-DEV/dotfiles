@@ -6,12 +6,14 @@
     onagre
     pavucontrol
     playerctl
+    swayosd
     wl-clipboard
     grim
     slurp
     swaynotificationcenter
     mpvpaper
     swww
+    networkmanagerapplet
   ];
 
   services.swaync = {
