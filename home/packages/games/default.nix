@@ -21,7 +21,10 @@ in
     wineWowPackages.staging
     nix-gaming.osu-lazer-bin
     nix-gaming.northstar-proton
+    minecraft
   ]);
+
+  nixpkgs.config.allowBroken = isEnable; # who broke minecraft ???
 
   # some desktop entries
   xdg.desktopEntries = lib.mkIf isEnable {
