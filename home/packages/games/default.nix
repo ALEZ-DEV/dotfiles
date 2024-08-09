@@ -21,7 +21,8 @@ in
     wineWowPackages.staging
     nix-gaming.osu-lazer-bin
     nix-gaming.northstar-proton
-    minecraft
+    prismlauncher
+    glfw-wayland-minecraft
   ]);
 
   nixpkgs.config.allowBroken = isEnable; # who broke minecraft ???
