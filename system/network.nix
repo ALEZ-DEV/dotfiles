@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  networking.hostName = "nixos";
+  networking.hostName = config.hostname;
 
   networking.networkmanager.enable = true;
   networking.extraHosts =
