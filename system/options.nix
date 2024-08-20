@@ -38,7 +38,7 @@
         description = "Default home folder of the current user";
       };
       pc-name = mkOption {
-        type = types.path;
+        type = types.string;
         default = builtins.getEnv "HOST";
         description = "Default PC name of the current computer";
       };

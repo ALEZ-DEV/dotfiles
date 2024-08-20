@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  toHost = "../../hosts";
+in
 {
   imports = [
     ./browser/default.nix
@@ -21,7 +24,7 @@
     ".config/alacritty/alacritty.toml".source = ./terminal/alacritty.toml;
 
     ".config/hypr/hyprland.conf".source = ./wm/hyprland.conf;
-    ".config/hypr/monitors.conf".source = "./../../hosts/${config.user.pc-name}/monitors.conf";
+    #".config/hypr/monitors.conf".source = builtins.toPath "./${toHost}/${config.user.pc-name}/monitors.conf";
     ".config/wallpaper/wallpaper.mp4".source = ./wm/wallpaper.mp4;
     ".config/wallpaper/wallpaper-littlescreen.mp4".source = ./wm/wallpaper-littlescreen.mp4;
     ".config/wallpaper/wallpaper-widescreen.mp4".source = ./wm/wallpaper-widescreen.mp4;
