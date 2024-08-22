@@ -8,9 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-gaming.url = "github:fufexan/nix-gaming?rev=6ca46afc73dcca4bfef3e6d18c7f1ac8aae99bd9"; # added specific commit because osu devs don't know how to make a release
+    nur.url = "github:nix-community/NUR";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nur, ... }@inputs:
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -25,6 +26,7 @@
         };
 
         modules = [
+          nur.nixosModules.nur
           ./system/configuration.nix
           ./hosts/${hostName}/hardware-configuration.nix
         ];
