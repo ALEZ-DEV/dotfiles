@@ -33,6 +33,7 @@
     git
     lshw
     polkit_gnome
+    gparted
     (catppuccin-sddm.override {
       flavor = "macchiato";
       font = "Noto Sans";

@@ -14,6 +14,9 @@
     ".config/scripts/hyprshot.sh".source = ./scripts/hyprshot.sh;
     ".config/scripts/playerctl-status.sh".source = ./scripts/playerctl-status.sh;
     ".config/scripts/playerctl-status-new.sh".source = ./scripts/playerctl-status-new.sh;
+    ".config/scripts/start-polkit.sh".text = ''
+      ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 &
+    '';
 
     ".config/alacritty/alacritty.toml".source = ./terminal/alacritty.toml;
 
