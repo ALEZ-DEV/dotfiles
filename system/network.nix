@@ -20,5 +20,8 @@
     0.0.0.0 remote-config-proxy-prd.uca.cloud.unity3d.com
 
     0.0.0.0 pc.crashsight.wetest.net
+
+    0.0.0.0 apm-log-upload-os.hoyoverse.com
+    0.0.0.0 zzz-log-upload-os.hoyoverse.com
   ''; 
 }
