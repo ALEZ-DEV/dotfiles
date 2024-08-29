@@ -11,5 +11,6 @@
   environment.systemPackages = with pkgs; [
     quickemu
     quickgui
+    config.nur.repos.ataraxiasjel.waydroid-script
   ];
 }
