@@ -8,5 +8,6 @@ in
     aagl.wavey-launcher
     aagl.honkers-railway-launcher
     aagl.sleepy-launcher
+    aagl.anime-game-launcher
   ]);
 }

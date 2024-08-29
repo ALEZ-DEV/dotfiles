@@ -14,6 +14,7 @@ in
     bottles
     mangohud
     gamemode
+    gamescope
     protonup-qt
     lutris
     winetricks
