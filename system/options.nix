@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ lib, ... }:
 
 {
   options = with lib; {
@@ -39,7 +39,7 @@
       };
     };
     hostname = mkOption {
-      type = types.string;
+      type = types.str;
       default = builtins.getEnv "HOST";
       description = "Default PC name of the current computer";
     };

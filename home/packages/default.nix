@@ -22,7 +22,7 @@
     nautilus
     obs-studio
     eog
-    gnome.gnome-disk-utility
+    gnome-disk-utility
 
     python3
     ffmpeg-full
