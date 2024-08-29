@@ -37,11 +37,11 @@
         default = builtins.getEnv "HOME";
         description = "Default home folder of the current user";
       };
-      pc-name = mkOption {
-        type = types.string;
-        default = builtins.getEnv "HOST";
-        description = "Default PC name of the current computer";
-      };
+    };
+    hostname = mkOption {
+      type = types.string;
+      default = builtins.getEnv "HOST";
+      description = "Default PC name of the current computer";
     };
   };
 }
