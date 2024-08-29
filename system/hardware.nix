@@ -9,4 +9,8 @@
 
     steam-hardware.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    opentabletdriver
+  ];
 }
