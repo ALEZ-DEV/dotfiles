@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   security.polkit.enable = true;
@@ -11,11 +11,13 @@
       };
     };
 
-    displayManager.sddm = {
-      enable = true;
-      wayland.enable = true;
-      theme = "catppuccin-macchiato";
-      package = pkgs.kdePackages.sddm;
+    displayManager = {
+      sddm = {
+        enable = true;
+        wayland.enable = true;
+        theme = "catppuccin-macchiato";
+        #package = pkgs.kdePackages.sddm;
+      };
     };
 
     gvfs.enable = true;

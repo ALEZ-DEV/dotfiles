@@ -20,4 +20,6 @@
     enable = true;
     package = pkgs.swaynotificationcenter;
   };
+
+  wayland.windowManager.hyprland.systemd.enable = true;
 }

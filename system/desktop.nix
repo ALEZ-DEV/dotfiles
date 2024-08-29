@@ -1,10 +1,12 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
   };
+
+  services.desktopManager.plasma6.enable = lib.mkIf config.packages.games.enable true;
 
   programs.light.enable = true;
 
