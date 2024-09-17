@@ -21,6 +21,7 @@
     fastfetch
     nautilus
     obs-studio
+    p7zip
     eog
     gnome-disk-utility
 
