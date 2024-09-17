@@ -24,4 +24,13 @@
     0.0.0.0 apm-log-upload-os.hoyoverse.com
     0.0.0.0 zzz-log-upload-os.hoyoverse.com
   ''; 
+
+  networking.firewall = {
+    enable = true;
+    allowedTCPPorts = [
+      80
+      443
+      53317 # for localsend
+    ];
+  };
 }
