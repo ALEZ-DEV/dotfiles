@@ -8,6 +8,7 @@
     podman
     distrobox
     jq
+    ghex
 
     # neovim dependecies
     neovim
