@@ -18,6 +18,10 @@ in
 
     activation = {
       configureBrowser = ''
+        if [ ! -d ${chromeDir} ]; then
+          mkdir ${chromeDir}
+        fi
+
         cd ${chromeDir}
         if $(${gitPath} rev-parse --is-inside-work-tree); then
           ${gitPath} pull
