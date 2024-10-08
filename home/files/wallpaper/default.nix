@@ -1,26 +1,23 @@
 {config, pkgs, ... }:
 let
-  wallpaperDownloaderRepo = "https://github.com/ALEZ-DEV/WallpaperDownloader";
-  gitPath = "${pkgs.git}/bin/git";
+  wallpaperDownloaderRepo = "https://github.com/ALEZ-DEV/WallpaperDownloader.git";
   imagesList = ./wallpaper.list;
-  imagesOutputFolder = "${config.user.home}/Pictures/wallpapers";
+  imagesOutputFolder = "${config.xdg.configHome}/wallpaper";
+  scriptDir = "${config.xdg.configHome}/scripts/wallpaperDownloader";
 in
 {
   home = {
-    packages = [ pkgs.git ];
-
-    sessionPath = [ "${pkgs.git}/bin" ];
-
     activation = {
-      configureBrowser = ''
-        if $(${gitPath} rev-parse --is-inside-work-tree); then
-          ${gitPath} pull
+      downloadWallpapers = ''
+        export PATH="${pkgs.git}/bin:${pkgs.wget}/bin:$PATH"
+
+        if [ ! -d "${scriptDir}" ]; then
+          git clone ${wallpaperDownloaderRepo} ${scriptDir}
         else
-          cd ${config.user.home}
-          rm -rf ./*
-          ${gitPath} clone ${wallpaperDownloaderRepo}
+          cd ${scriptDir} && git pull
         fi
-        sh ./bashWallpaperDownload.sh ${imagesList} ${imagesOutputFolder}
+
+        sh ${scriptDir}/bashImageDownloader.sh ${imagesList} ${imagesOutputFolder}
 
         echo "Downloaded wallpaper!"
       '';

@@ -6,6 +6,7 @@
     ./mpv/default.nix
     ./nvim/default.nix
     ./swaync/default.nix
+    ./wallpaper/default.nix
     ./waybar/default.nix
     ./wofi/default.nix
   ];
