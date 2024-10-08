@@ -18,6 +18,7 @@
     ".config/scripts/start-polkit.sh".text = ''
       ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 &
     '';
+    ".config/scripts/wallpaper-manager.sh".text = config.user.wallpaper.script;
 
     ".config/alacritty/alacritty.toml".source = ./terminal/alacritty.toml;
 

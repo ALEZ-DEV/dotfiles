@@ -37,6 +37,15 @@
         default = builtins.getEnv "HOME";
         description = "Default home folder of the current user";
       };
+      wallpaper = {
+        script = mkOption {
+          type = types.str;
+          description = "The script that will be executed at startup to manage your wallpaper";
+          default = ''
+            mpvpaper 'eDP-1' -o "--loop --panscan=1.0" ~/.config/wallpaper/wallpaper.mp4 &
+          '';
+        };
+      };
     };
     hostname = mkOption {
       type = types.str;
