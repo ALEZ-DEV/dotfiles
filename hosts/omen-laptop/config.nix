@@ -19,10 +19,10 @@
       swww-daemon &
       while :
       do
-        swww img -o 'eDP-1' ~/.config/wallpaper/$((0 + $RANDOM % $WALLPAPER_COUNT))
-        swww img -o 'DP-2' ~/.config/wallpaper/$((0 + $RANDOM % $WALLPAPER_COUNT))
-        swww img -o 'HDMI-A-1' ~/.config/wallpaper/$((0 + $RANDOM % $WALLPAPER_COUNT))
-        sleep 1h
+        swww img -o 'eDP-1' --transition-type wipe --transition-angle 35 --transition-step 60 ~/.config/wallpaper/$((0 + $RANDOM % $WALLPAPER_COUNT))
+        swww img -o 'DP-1' --transition-type wipe --transition-angle 35 --transition-step 60 ~/.config/wallpaper/$((0 + $RANDOM % $WALLPAPER_COUNT))
+        swww img -o 'HDMI-A-1' --transition-type wipe --transition-angle 35 --transition-step 60 ~/.config/wallpaper/$((0 + $RANDOM % $WALLPAPER_COUNT))
+        sleep 30m
       done
     '';
   };  
