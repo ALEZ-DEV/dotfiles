@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  imagesList = ./wallpaper/wallpaper.list;
+in
 {
   imports = [
     ./browser/default.nix
@@ -19,6 +22,9 @@
       ${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1 &
     '';
     ".config/scripts/wallpaper-manager.sh".text = config.user.wallpaper.script;
+    ".config/scripts/set-special-variable.sh".text = ''
+      export WALLPAPER_COUNT=$(wc -l < ${imagesList})
+    '';
 
     ".config/alacritty/alacritty.toml".source = ./terminal/alacritty.toml;
 
