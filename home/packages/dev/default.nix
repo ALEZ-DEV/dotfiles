@@ -15,12 +15,5 @@
     gcc
     fzf
     ripgrep
-
-    # language
-    # Rust
-    rustc
-    cargo
-    just
-    rust-analyzer
   ]);
 }
