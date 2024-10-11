@@ -22,5 +22,21 @@ in
         echo "Downloaded wallpaper!"
       '';
     };
+
+    file.".config/scripts/wallpaper-manager.sh".text = ''
+      source ~/.config/scripts/set-special-variable.sh
+
+      swww-daemon &
+      displays=$(wlr-randr --json | jq -r '.[].name')
+
+      while :
+      do
+        for display in $displays; do
+          echo $display
+          swww img -o $display --transition-type wipe --transition-angle 35 --transition-step 60 ~/.config/wallpaper/$((0 + $RANDOM % $WALLPAPER_COUNT))
+        done
+        sleep 30m
+      done
+    '';
   };
 }
