@@ -34,6 +34,7 @@
     lshw
     polkit_gnome
     gparted
+    wlr-randr
     (catppuccin-sddm.override {
       flavor = "macchiato";
       font = "Noto Sans";
