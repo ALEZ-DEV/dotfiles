@@ -32,7 +32,6 @@ in
       while :
       do
         for display in $displays; do
-          echo $display
           swww img -o $display --transition-type wipe --transition-angle 35 --transition-step 60 ~/.config/wallpaper/$((0 + $RANDOM % $WALLPAPER_COUNT))
         done
         sleep 30m
