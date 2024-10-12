@@ -23,19 +23,26 @@ in
       '';
     };
 
-    file.".config/scripts/wallpaper-manager.sh".text = ''
-      source ~/.config/scripts/set-special-variable.sh
+    file = {
+      ".config/scripts/wallpaper-manager.sh".text = ''
+        swww-daemon &
+        
+        while :
+        do
+          sh ${config.xdg.configHome}/scripts/update-wallpaper.sh
+          sleep 30m
+        done
 
-      swww-daemon &
-      displays=$(wlr-randr --json | jq -r '.[].name')
+      '';
 
-      while :
-      do
+      ".config/scripts/update-wallpaper.sh".text = ''
+        source ${config.xdg.configHome}/scripts/set-special-variable.sh
+        displays=$(wlr-randr --json | jq -r '.[].name')
+
         for display in $displays; do
           swww img -o $display --transition-type wipe --transition-angle 35 --transition-step 60 ~/.config/wallpaper/$((0 + $RANDOM % $WALLPAPER_COUNT))
         done
-        sleep 30m
-      done
-    '';
+      '';
+    };
   };
 }
