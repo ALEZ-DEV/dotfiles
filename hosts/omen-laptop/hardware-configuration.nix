@@ -16,12 +16,20 @@
   boot.kernelParams = [ "nvidia-drm.fbdev=1" ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/17f9c732-6c0a-437d-8303-629efccb828e";
+    {
+      device = "/dev/disk/by-uuid/17f9c732-6c0a-437d-8303-629efccb828e";
+      fsType = "ext4";
+    };
+
+  fileSystems."/run/media/alez/Games" = 
+    {
+      device = "/dev/disk/by-uuid/25a4f253-a4de-4249-9fbd-50a20b73900c";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/2450-F833";
+    {
+      device = "/dev/disk/by-uuid/2450-F833";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
