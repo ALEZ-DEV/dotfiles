@@ -24,6 +24,7 @@
     p7zip
     eog
     gnome-disk-utility
+    baobab
 
     python3
     ffmpeg-full
