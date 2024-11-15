@@ -9,6 +9,7 @@
     distrobox
     jq
     ghex
+    sqlitestudio
 
     # neovim dependecies
     neovim
