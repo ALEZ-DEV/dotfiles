@@ -36,6 +36,7 @@
     gparted
     wlr-randr
     samba
+    brightnessctl
     (catppuccin-sddm.override {
       flavor = "macchiato";
       font = "Noto Sans";
