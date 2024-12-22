@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./browser/default.nix
+    #./browser/default.nix
     ./dev/default.nix
     ./desktop/default.nix
     ./games/default.nix
@@ -25,9 +25,14 @@
     eog
     gnome-disk-utility
     baobab
+    qmk
+    btop
+    floorp
+    sqlite
 
     python3
     ffmpeg-full
     yt-dlp
   ];
+
 }

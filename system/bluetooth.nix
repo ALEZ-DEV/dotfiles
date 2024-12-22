@@ -8,6 +8,8 @@
       General = {
         Enable = "Source,Sink,Media,Socket";
         Experimental = true;
+        EnableHID = true;
+        JustWorksRepairing = "confirm";
       };
     };
   };

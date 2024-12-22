@@ -35,6 +35,7 @@
     polkit_gnome
     gparted
     wlr-randr
+    samba
     (catppuccin-sddm.override {
       flavor = "macchiato";
       font = "Noto Sans";
