@@ -63,6 +63,28 @@
 
   environment.systemPackages = [ pkgs.nv-codec-headers-12 ];
 
+  environment.sessionVariables = {
+    GBM_BACKEND = "nvidia-drm";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    LIBVA_DRIVER_NAME = "nvidia";
+    __GL_GSYNC_ALLOWED = "1";
+    __GL_VRR_ALLOWED = "0"; 
+    WLR_DRM_NO_ATOMIC = "1";
+    __NV_PRIME_RENDER_OFFLOAD=1;
+    __VK_LAYER_NV_optimus = "NVIDIA_only";
+
+    QT_AUTO_SCREEN_SCALE_FACTOR = "1";
+    QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
+    QT_QPA_PLATFORM = "wayland";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
+
+    GDK_SCALE = "2";
+
+    ELECTRON_OZONE_PLATFORM_HINT = "auto";
+
+    NVD_BACKEND = "direct";
+  };
+
   hardware = {
     nvidia = {
       modesetting.enable = true;
