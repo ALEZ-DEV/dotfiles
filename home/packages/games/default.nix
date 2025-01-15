@@ -19,7 +19,7 @@ in
     lutris
     winetricks
     protontricks
-    wineWowPackages.staging
+    wineWowPackages.stagingFull
     nix-gaming.osu-lazer-bin
     nix-gaming.northstar-proton
     prismlauncher
@@ -34,6 +34,14 @@ in
       name = "Nikke: Goddess of Victory";
       genericName = "nikke";
       exec = "sh ${config.user.home}/Games/Nikke/start.sh";
+      terminal = false;
+      categories = [ "Application" ];
+    };
+
+    "steamfh" = {
+      name = "Steam force Hidraw";
+      genericName = "steamfh";
+      exec = "SDL_GAMECONTROLLERCONFIG= SDL_JOYSTICK_HIDAPI=0 steam";
       terminal = false;
       categories = [ "Application" ];
     };
