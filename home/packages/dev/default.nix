@@ -10,6 +10,7 @@
     jq
     ghex
     sqlitestudio
+    blender
 
     # neovim dependecies
     neovim
