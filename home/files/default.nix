@@ -10,8 +10,8 @@ let
 in
 {
   imports = [
-    ./browser/default.nix
-    ./mpv/default.nix
+    #./browser/default.nix
+    #./mpv/default.nix
     ./nvim/default.nix
     ./swaync/default.nix
     ./wallpaper/default.nix
