@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -27,12 +27,11 @@
     baobab
     qmk
     btop
-    floorp
     sqlite
+    inputs.zen-browser.packages.${pkgs.system}.default
 
     python3
     ffmpeg-full
     yt-dlp
   ];
-
 }

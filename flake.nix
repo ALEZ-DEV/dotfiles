@@ -8,6 +8,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-gaming.url = "github:fufexan/nix-gaming?rev=6ca46afc73dcca4bfef3e6d18c7f1ac8aae99bd9"; # added specific commit because osu devs don't know how to make a release
+    zen-browser  = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, nur, ... }@inputs:
