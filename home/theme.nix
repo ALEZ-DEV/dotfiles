@@ -1,8 +1,9 @@
-{ config, pkgs, ... }: 
+{ pkgs, ... }: 
 
 {
   home.packages = with pkgs; [
     adwaita-icon-theme
+    morewaita-icon-theme
     adw-gtk3
     adwaita-qt
     bibata-cursors
@@ -12,7 +13,9 @@
     enable = true;
     theme.name = "adw-gtk3-dark";
     cursorTheme.name = "Bibata-Modern-Classic";
-    iconTheme.name = "GruvboxPlus";
+    iconTheme = {
+      name = "MoreWaita";
+    };
   };
 
   dconf.settings = {
