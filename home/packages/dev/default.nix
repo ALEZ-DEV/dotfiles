@@ -11,6 +11,7 @@
     ghex
     sqlitestudio
     blender
+    dbeaver-bin
 
     # neovim dependecies
     neovim
