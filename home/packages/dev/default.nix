@@ -12,6 +12,7 @@
     sqlitestudio
     blender
     dbeaver-bin
+    chromium
 
     # neovim dependecies
     neovim
