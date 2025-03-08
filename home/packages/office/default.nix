@@ -10,5 +10,6 @@
     appflowy
     teams-for-linux
     libreoffice
+    delfin
   ]);
 }
