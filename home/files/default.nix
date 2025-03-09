@@ -3,10 +3,10 @@
 let
   imagesList = ./wallpaper/wallpaper.list;
 
-  floorpDir = "${config.user.home}/.floorp";
-  floorpEntries = builtins.attrNames (builtins.readDir floorpDir);
-  profileDir = builtins.elemAt (builtins.filter (entry: builtins.match ".*\\.default" entry != null) floorpEntries) 0;
-  configDir = "${floorpDir}/${profileDir}";
+  #floorpDir = "${config.user.home}/.floorp";
+  #floorpEntries = builtins.attrNames (builtins.readDir floorpDir);
+  #profileDir = builtins.elemAt (builtins.filter (entry: builtins.match ".*\\.default" entry != null) floorpEntries) 0;
+  #configDir = "${floorpDir}/${profileDir}";
 in
 {
   imports = [
@@ -45,18 +45,16 @@ in
     ".config/waybar/style-app.css".source = ./waybar/style-app.css;
     ".config/waybar/style-scheme.css".source = ./waybar/style-scheme.css;
 
-    ".config/scripts/mpv_with_cookie.py".text = ''
-      #!/bin/bash
-      COOKIE_FILE="/tmp/mpv_cookies.txt"
-      DB_PATH="${configDir}/cookies.sqlite"
-      TEMP_DB="/tmp/cookies.sqlite"
+    #".config/scripts/mpv_with_cookie.py".text = ''
+    #  #!/bin/bash COOKIE_FILE="/tmp/mpv_cookies.txt" DB_PATH="${configDir}/cookies.sqlite"
+    #  TEMP_DB="/tmp/cookies.sqlite"
 
-      cp "$DB_PATH" "$TEMP_DB"
-      sqlite3 "$TEMP_DB" "SELECT host, path, isSecure, expiry, name, value FROM moz_cookies" > "$COOKIE_FILE"
-      rm "$TEMP_DB"
+    #  cp "$DB_PATH" "$TEMP_DB"
+    #  sqlite3 "$TEMP_DB" "SELECT host, path, isSecure, expiry, name, value FROM moz_cookies" > "$COOKIE_FILE"
+    #  rm "$TEMP_DB"
 
-      mpv --ytdl-format="(best[height>=1080]/bestvideo+bestaudio)" --cookies-file="$COOKIE_FILE" "$1"
-    '';
+    #  mpv --ytdl-format="(best[height>=1080]/bestvideo+bestaudio)" --cookies-file="$COOKIE_FILE" "$1"
+    #'';
 
     ".bashrc".text = ''
       alias mpvc='sh ${config.user.home}/.config/scripts/mpv_with_cookie.py'
