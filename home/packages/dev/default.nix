@@ -13,6 +13,7 @@
     blender
     dbeaver-bin
     chromium
+    ollama
 
     # neovim dependecies
     neovim
