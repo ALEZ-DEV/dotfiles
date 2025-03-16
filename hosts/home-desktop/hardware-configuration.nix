@@ -9,7 +9,7 @@
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [ "amdgpu" ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
@@ -24,8 +24,15 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
+  fileSystems."/run/media/alez/Games" =
+    {
+      device = "/dev/disk/by-uuid/9b0f8c5b-de5f-4ff6-8ca3-b890342cc92e";
+      fsType = "ext4";
+    };
+
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/262a2998-268c-4e02-a116-d603c38d4ee6"; }
+    [
+      { device = "/dev/disk/by-uuid/262a2998-268c-4e02-a116-d603c38d4ee6"; }
     ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
@@ -38,4 +45,27 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.opengl = {
+    driSupport32Bit = true;
+
+    extraPackages = with pkgs; [
+      rocmPackages.clr.icd
+      amdvlk
+      driversi686Linux.amdvlk
+    ];
+  };
+
+  environment.systemPackages = with pkgs; [
+    lact
+  ];
+
+  systemd.services.lact = {
+    description = "AMDGPU Control Daemon";
+    after = ["multi-user.target"];
+    wantedBy = ["multi-user.target"];
+    serviceConfig = {
+      ExecStart = "${pkgs.lact}/bin/lact daemon";
+    };
+    enable = true;
+  };
 }
