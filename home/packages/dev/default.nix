@@ -14,6 +14,8 @@
     dbeaver-bin
     chromium
     ollama
+    ghidra
+    bruno
 
     # neovim dependecies
     neovim
