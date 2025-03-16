@@ -20,6 +20,9 @@ in
     winetricks
     protontricks
     wineWowPackages.stagingFull
+    (writeShellScriptBin "wine64" ''
+      exec ${wineWowPackages.stagingFull}/bin/wine "$@"
+    '')
     nix-gaming.osu-lazer-bin
     nix-gaming.northstar-proton
     prismlauncher
