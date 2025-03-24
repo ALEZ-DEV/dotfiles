@@ -30,6 +30,7 @@
     sqlite
     inputs.zen-browser.packages.${pkgs.system}.default
     cura-appimage
+    delfin
 
     python3
     ffmpeg-full
