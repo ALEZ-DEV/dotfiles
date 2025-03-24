@@ -29,6 +29,7 @@
     btop
     sqlite
     inputs.zen-browser.packages.${pkgs.system}.default
+    cura-appimage
 
     python3
     ffmpeg-full
