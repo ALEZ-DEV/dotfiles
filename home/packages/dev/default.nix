@@ -16,6 +16,7 @@
     ollama
     ghidra
     bruno
+    bbe
 
     # neovim dependecies
     neovim
