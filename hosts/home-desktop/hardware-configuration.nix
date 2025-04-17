@@ -45,8 +45,9 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  hardware.opengl = {
-    driSupport32Bit = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
 
     extraPackages = with pkgs; [
       rocmPackages.clr.icd
