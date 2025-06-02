@@ -17,6 +17,7 @@
     ghidra
     bruno
     bbe
+    usbimager
 
     # neovim dependecies
     neovim
