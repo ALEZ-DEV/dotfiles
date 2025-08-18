@@ -7,7 +7,6 @@ in
 {
   imports = [
     ./aagl.nix
-    ./wheel.nix
   ];
 
   home.packages = lib.mkIf isEnable (with pkgs; [
