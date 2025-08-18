@@ -7,6 +7,7 @@ in
 {
   imports = [
     ./aagl.nix
+    ./wheel.nix
   ];
 
   home.packages = lib.mkIf isEnable (with pkgs; [
@@ -27,6 +28,7 @@ in
     nix-gaming.northstar-proton
     prismlauncher
     glfw-wayland-minecraft
+    r2modman
   ]);
 
   nixpkgs.config.allowBroken = isEnable; # who broke minecraft ???
