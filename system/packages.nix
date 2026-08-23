@@ -20,7 +20,7 @@
   programs.steam.enable = true;
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [
-    wineWowPackages.stagingFull
+    wineWow64Packages.stagingFull
   ];
 
   environment.systemPackages = with pkgs; [

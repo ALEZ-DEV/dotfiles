@@ -12,6 +12,7 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    minegrub-theme.url = "github:Lxtharia/minegrub-theme";
   };
 
   outputs = { self, nixpkgs, home-manager, nur, ... }@inputs:
@@ -31,6 +32,7 @@
         modules = [
           ./system/configuration.nix
           ./hosts/${hostName}/hardware-configuration.nix
+          inputs.minegrub-theme.nixosModules.default
         ];
       };
     };

@@ -37,12 +37,28 @@
       "udev.log_priority=3"
     ];
 
-    loader.timeout = 0;
-    loader.systemd-boot.enable = true;
+    loader.timeout = 15;
+    loader.systemd-boot.enable = false;
+
+    loader.grub = {
+      enable = true;
+      efiSupport = true;
+      device = "nodev";
+      useOSProber = true;
+
+      minegrub-theme = {
+        enable = true;
+        splash = "100% Flakes!";
+        background = "background_options/1.8  - [Classic Minecraft].png";
+        boot-options-count = 4;
+      };
+    };
+
     loader.efi.canTouchEfiVariables = true;
   };
 
-  time.timeZone = "Europe/Zurich";
+  #time.timeZone = "Europe/Zurich";
+  time.timeZone = "Asia/Tokyo";
 
   i18n.defaultLocale = "en_US.UTF-8";
 
