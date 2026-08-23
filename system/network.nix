@@ -3,7 +3,20 @@
 {
   networking.hostName = config.hostname;
 
-  networking.networkmanager.enable = true;
+  #networking.wireless.iwd.settings = {
+  #  Network = {
+  #    EnableIPv6 = true;
+  #  };
+  #  Settings = {
+  #    AutoConnect = true;
+  #  };
+  #};
+
+  networking.networkmanager = {
+    enable = true;
+    #wifi.backend = "iwd";
+    };
+
   networking.extraHosts =
   ''
     0.0.0.0 overseauspider.yuanshen.com
@@ -23,7 +36,9 @@
 
     0.0.0.0 apm-log-upload-os.hoyoverse.com
     0.0.0.0 zzz-log-upload-os.hoyoverse.com
-  ''; 
+  '';
+
+  networking.nftables.enable = true;
 
   networking.firewall = {
     enable = true;
@@ -32,5 +47,7 @@
       443
       53317 # for localsend
     ];
+
+    trustedInterfaces = [ "virbr0" ];
   };
 }

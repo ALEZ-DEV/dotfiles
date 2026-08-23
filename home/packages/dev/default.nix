@@ -2,7 +2,6 @@
 
 {
   home.packages = lib.mkIf config.packages.dev.enable (with pkgs; [
-    git
     gitnuro
     lazygit
     podman
@@ -18,6 +17,8 @@
     bruno
     bbe
     usbimager
+    mitmproxy
+    jetbrains.rider
 
     # neovim dependecies
     neovim
@@ -25,4 +26,9 @@
     fzf
     ripgrep
   ]);
+
+  programs.git = {
+    enable = true;
+    lfs.enable = true;
+  };
 }

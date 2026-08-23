@@ -5,9 +5,9 @@ let
   isEnable = config.packages.games.enable;
 in 
 {
-  imports = [
-    ./aagl.nix
-  ];
+  #imports = [
+  #  ./aagl.nix
+  #];
 
   home.packages = lib.mkIf isEnable (with pkgs; [
     waydroid
@@ -23,10 +23,12 @@ in
     (writeShellScriptBin "wine64" ''
       exec ${wineWowPackages.stagingFull}/bin/wine "$@"
     '')
-    nix-gaming.osu-lazer-bin
+    #nix-gaming.osu-lazer-bin
     nix-gaming.northstar-proton
     prismlauncher
-    glfw-wayland-minecraft
+    glfw3-minecraft
+    ankama-launcher
+    fuse
   ]);
 
   nixpkgs.config.allowBroken = isEnable; # who broke minecraft ???

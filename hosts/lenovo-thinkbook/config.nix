@@ -4,7 +4,7 @@
   config = {
     packages = {
       dev.enable = true;
-      games.enable = false;
+      games.enable = true;
       office.enable = true;
       video-editor.enable = false;
     };

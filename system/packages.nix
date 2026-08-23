@@ -43,5 +43,7 @@
       fontSize = "9";
       background = "${./sddm_wallpaper.jpg}";
     })
+    wpa_supplicant
+    wpa_supplicant_gui
   ];
 }

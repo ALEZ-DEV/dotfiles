@@ -6,10 +6,15 @@
   virtualisation = {
     containers.enable = true;
     waydroid.enable = true;
-    lxd.enable = true;
+    # Need to switch to Incus apparently
+    #lxd.enable = true;
     spiceUSBRedirection.enable = true;
     docker.enable = true;
-    libvirtd.enable = true;
+    libvirtd = {
+      enable = true;
+
+      qemu.swtpm.enable = true;
+    };
   };
 
   users = {
@@ -19,5 +24,6 @@
 
   environment.systemPackages = with pkgs; [
     quickemu
+    swtpm
   ];
 }
