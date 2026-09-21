@@ -10,6 +10,6 @@ if [ -z "$HOST" ]; then
 fi
 
 # this script just copy the hardware-confirguration.nix from /etc/nixos
-mkdir ~/dotfiles/hosts/$HOST
+#mkdir ~/dotfiles/hosts/$HOST
 sudo cp /etc/nixos/hardware-configuration.nix ~/dotfiles/hosts/$HOST/hardware-configuration.nix
 sudo chown $USER ~/dotfiles/hosts/$HOST/hardware-configuration.nix

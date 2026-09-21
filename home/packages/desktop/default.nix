@@ -12,7 +12,7 @@
     slurp
     swaynotificationcenter
     mpvpaper
-    swww
+    awww
     networkmanagerapplet
   ];
 

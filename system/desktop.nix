@@ -8,7 +8,7 @@
 
   services.desktopManager.plasma6.enable = lib.mkIf config.packages.games.enable true;
 
-  programs.light.enable = true;
+  #programs.light.enable = true;
 
   xdg = {
     portal = {

@@ -11,5 +11,9 @@
     teams-for-linux
     libreoffice
     delfin
+    wireguard-tools
+    slack
+    drawio
+    audacity
   ]);
 }

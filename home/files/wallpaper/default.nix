@@ -25,8 +25,8 @@ in
 
     file = {
       ".config/scripts/wallpaper-manager.sh".text = ''
-        swww-daemon &
-        
+        awww-daemon &
+
         while :
         do
           sh ${config.xdg.configHome}/scripts/update-wallpaper.sh
@@ -40,7 +40,7 @@ in
         displays=$(wlr-randr --json | jq -r '.[].name')
 
         for display in $displays; do
-          swww img -o $display --transition-type wipe --transition-angle 35 --transition-step 60 ~/.config/wallpaper/$((0 + $RANDOM % $WALLPAPER_COUNT))
+          awww img -o $display --transition-type wipe --transition-angle 35 --transition-step 60 ~/.config/wallpaper/$((0 + $RANDOM % $WALLPAPER_COUNT))
         done
       '';
     };

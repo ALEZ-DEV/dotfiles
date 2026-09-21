@@ -2,7 +2,6 @@
 
 {
   home.packages = lib.mkIf config.packages.dev.enable (with pkgs; [
-    git
     gitnuro
     lazygit
     podman
@@ -17,8 +16,11 @@
     ghidra
     bruno
     bbe
+
     sniffnet
     mitmproxy
+    usbimager
+    jetbrains.rider
 
     # neovim dependecies
     neovim
@@ -130,5 +132,9 @@
           buffer_font_size = 20;
       };
     };
-  };
+    
+    programs.git = {
+      enable = true;
+      lfs.enable = true;
+    };
 }

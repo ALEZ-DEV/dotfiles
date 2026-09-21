@@ -5,9 +5,9 @@ let
   isEnable = config.packages.games.enable;
 in 
 {
-  imports = [
-    ./aagl.nix
-  ];
+  #imports = [
+  #  ./aagl.nix
+  #];
 
   home.packages = lib.mkIf isEnable (with pkgs; [
     waydroid
@@ -19,15 +19,17 @@ in
     lutris
     winetricks
     protontricks
-    wineWowPackages.stagingFull
+    wineWow64Packages.stagingFull
     (writeShellScriptBin "wine64" ''
-      exec ${wineWowPackages.stagingFull}/bin/wine "$@"
+      exec ${wineWow64Packages.stagingFull}/bin/wine "$@"
     '')
-    nix-gaming.osu-lazer-bin
+    #nix-gaming.osu-lazer-bin
     nix-gaming.northstar-proton
     prismlauncher
-    glfw-wayland-minecraft
     r2modman
+    glfw3-minecraft
+    ankama-launcher
+    fuse
   ]);
 
   nixpkgs.config.allowBroken = isEnable; # who broke minecraft ???

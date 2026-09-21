@@ -15,7 +15,7 @@
       sddm = {
         enable = true;
         wayland.enable = true;
-        theme = "catppuccin-macchiato";
+        theme = "catppuccin-macchiato-mauve";
         package = pkgs.kdePackages.sddm;
       };
     };

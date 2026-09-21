@@ -3,8 +3,10 @@
 {
   programs.git = {
     enable = true;
-    userName = "ALEZ-DEV";
-    userEmail = "raidersfocus@gmail.com";
+    settings.user = {
+      name = "ALEZ-DEV";
+      email = "me@al3z.dev";
+    };
   };
 
   #programs.zsh = {
