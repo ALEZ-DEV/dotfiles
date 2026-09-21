@@ -33,4 +33,6 @@
       53317 # for localsend
     ];
   };
+
+  security.pki.certificateFiles = [ /etc/ssl/certs/mitmproxy-ca-cert.pem ];
 }
