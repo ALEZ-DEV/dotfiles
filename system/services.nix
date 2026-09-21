@@ -28,6 +28,21 @@
       alsa.enable = true;
       alsa.support32Bit = true;
       pulse.enable = true;
+
+      extraConfig.pipewire."91-null-sinks" = {
+        "context.objects" = [
+          {
+            factory = "adapter";
+            args = {
+              "factory.name" = "support.null-audio-sink";
+              "node.name" = "Game-Share";
+              "node.description" = "GameShare";
+              "media.class" = "Audio/Sink";
+              "audio.position" = "FL,FR";
+            };
+          }
+        ];
+      };
     };
 
     actkbd = {

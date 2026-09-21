@@ -18,8 +18,11 @@
   };
 
   users = {
-    users.alez.extraGroups = [ "docker" ];
-    groups.libvirtd.members = ["alez"];
+    users.alez.extraGroups = [ "docker" "wireshark" "sniffnet" ];
+    groups = {
+      wireshark = {};
+      libvirtd.members = ["alez"];
+    };
   };
 
   environment.systemPackages = with pkgs; [

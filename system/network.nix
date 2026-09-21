@@ -50,4 +50,6 @@
 
     trustedInterfaces = [ "virbr0" ];
   };
+
+  security.pki.certificateFiles = [ /etc/ssl/certs/mitmproxy-ca-cert.pem ];
 }

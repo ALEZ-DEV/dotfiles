@@ -12,6 +12,7 @@
     ./services.nix
     ./users.nix
     ./virtualisation.nix
+    ./wheel.nix
   ];
 
   boot = {

@@ -26,6 +26,7 @@ in
     #nix-gaming.osu-lazer-bin
     nix-gaming.northstar-proton
     prismlauncher
+    r2modman
     glfw3-minecraft
     ankama-launcher
     fuse

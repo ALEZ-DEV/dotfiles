@@ -45,6 +45,12 @@ in
     ".config/waybar/style-app.css".source = ./waybar/style-app.css;
     ".config/waybar/style-scheme.css".source = ./waybar/style-scheme.css;
 
+    #Zed related
+    ".config/zed/themes/GitHub Dark Default.json".source = ./zed/theme.json;
+    ".config/zed/keymap.json".source = ./zed/keymap.json;
+
+    ".config/pipewire/gameshare-to-headphones.sh".source = ./pipewire/gameshare-to-headphones.sh;
+
     #".config/scripts/mpv_with_cookie.py".text = ''
     #  #!/bin/bash COOKIE_FILE="/tmp/mpv_cookies.txt" DB_PATH="${configDir}/cookies.sqlite"
     #  TEMP_DB="/tmp/cookies.sqlite"
